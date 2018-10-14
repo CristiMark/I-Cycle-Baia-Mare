@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/background_light">
+
+    <ImageView
+        android:id="@+id/DialogImage"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:scaleType="fitCenter"
+        android:tag="white_btn"
+        app:srcCompat="@drawable/coll" />
+
+    <ImageView
+        android:id="@+id/image_areas"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        android:src="@drawable/coll_mask"
+        />
+    <!--<Button-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_marginLeft="120dp"-->
+        <!--android:layout_marginStart="120dp"-->
+        <!--android:id="@+id/redd_btn"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:cursorVisible="false"-->
+        <!--tools:background="@android:color/transparent"-->
+        <!--android:onClick="ColorRoundOnClick (MainActivity)"-->
+        <!--android:tag="red_btn" />-->
+
+</FrameLayout>

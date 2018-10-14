@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title=" Our proposals"  android:id="@+id/Dificulty">
+        <menu>
+            <item
+                android:id="@+id/nav_easy"
+                android:icon="@mipmap/light"
+                android:title="Light" />
+            <item
+                android:id="@+id/nav_mediu"
+                android:icon="@mipmap/mediu"
+                android:title="Mediu" />
+            <item
+                android:id="@+id/nav_hard"
+                android:icon="@mipmap/hard"
+                android:title="Hard" />
+            <item
+                android:id="@+id/nav_extra_hard"
+                android:icon="@mipmap/hard"
+                android:title="Extra Hard" />
+        </menu>
+    </item>
+    <group android:checkableBehavior="single">
+
+       <!-- <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="About" />-->
+
+
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="none">
+
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_live_help_black_24dp"
+            android:title="What and How?" />
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_date_range_black_24dp"
+            android:title="Cultural Events"
+            />
+        <!--<item-->
+            <!--android:id="@+id/rentAbike"-->
+            <!--android:icon="@drawable/ic_directions_bike_black_24dp"-->
+            <!--android:title="Rent A Bike" />-->
+
+    </group>
+    <group
+        android:id="@+id/menu_site"
+        android:checkableBehavior="none"
+        >
+        <item
+            android:id="@+id/nav_address"
+            android:icon="@mipmap/muntomanii"
+            android:title="www.muntzomani.ro"
+             />
+    </group>
+
+</menu>

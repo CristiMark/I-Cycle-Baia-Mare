@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/card_margin"
+    android:layout_marginLeft="@dimen/card_margin"
+    android:layout_marginRight="@dimen/card_margin"
+    android:id="@+id/CardView"
+    app:cardCornerRadius="@dimen/cast_libraries_material_featurehighlight_center_horizontal_offset"
+    android:layout_marginTop="@dimen/card_margin"
+    android:paddingTop="@dimen/card_margin"
+    android:paddingBottom="@dimen/card_margin"
+    android:paddingLeft="@dimen/card_margin"
+    android:paddingRight="@dimen/card_margin"
+    app:cardBackgroundColor="@color/cardview_shadow_end_color"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/ColorBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bottom_sheet_peek_height"
+            android:background="@color/colorPrimary"
+            android:paddingTop="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/navigateToo"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:onClick="RouteOnnClick"
+                android:padding="10dp"
+                android:paddingTop="10dp"
+                app:srcCompat="@drawable/ic_near_me_black_24dp"
+                tools:onClick="RouteOnnClick" />
+
+            <TextView
+                android:id="@+id/MarkerTile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/navigateToo"
+                android:layout_toStartOf="@+id/navigateToo"
+                android:text="Title dummy"
+                android:textColor="@android:color/black"
+                android:textSize="19sp" />
+
+        </RelativeLayout>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_bottom"
+            android:layout_weight="0.26">
+
+            <!--<ImageView
+                android:id="@+id/MarkerImage"
+                android:layout_width="match_parent"
+                android:layout_height="121dp"
+                app:srcCompat="@drawable/common_google_signin_btn_icon_light_focused"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="13dp" />-->
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/MarkerImage"
+                android:layout_width="match_parent"
+                android:layout_height="121dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginTop="13dp"
+                android:contextClickable="true"
+                app:srcCompat="@drawable/common_google_signin_btn_icon_light_focused"
+                tools:clickable="true" />
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabDots"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp"
+                android:layout_alignBottom="@+id/MarkerImage"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:id="@+id/establecimiento_icon_sucursales"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/MarkerImage"
+                android:layout_marginLeft="13dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="12dp"
+                app:srcCompat="@drawable/ic_play_light" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@id/establecimiento_icon_sucursales"
+                android:layout_toEndOf="@id/establecimiento_icon_sucursales"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:id="@+id/linearLayout">
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/establecimiento_icon_sucursales"
+                android:layout_toRightOf="@+id/establecimiento_icon_sucursales"
+                android:layout_toEndOf="@+id/establecimiento_icon_sucursales"
+                android:id="@+id/frameLayout">
+
+                <TextView
+                    android:id="@+id/MarkerContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:paddingTop="7dp"
+                    android:text="Text dummy 1"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black" />
+            </FrameLayout>
+
+        </RelativeLayout>
+</ScrollView>
+       <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="12dp"
+            android:background="@drawable/border_bottom">
+
+            &lt;!&ndash;<RelativeLayout&ndash;&gt;
+            &lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;
+            &lt;!&ndash;android:layout_height="match_parent">&ndash;&gt;
+
+            &lt;!&ndash;<ImageButton&ndash;&gt;
+            &lt;!&ndash;android:id="@+id/navigateToo"&ndash;&gt;
+            &lt;!&ndash;android:layout_width="70dp"&ndash;&gt;
+            &lt;!&ndash;android:layout_height="60dp"&ndash;&gt;
+            &lt;!&ndash;android:src="@android:drawable/ic_dialog_map"&ndash;&gt;
+            &lt;!&ndash;android:layout_centerHorizontal="true"&ndash;&gt;
+            &lt;!&ndash;android:background="?attr/selectableItemBackgroundBorderless"/>&ndash;&gt;
+
+            &lt;!&ndash;<TextView&ndash;&gt;
+            &lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;
+            &lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;
+            &lt;!&ndash;android:text="BUTTON 1"&ndash;&gt;
+            &lt;!&ndash;android:textColor="@android:color/black"&ndash;&gt;
+            &lt;!&ndash;android:layout_alignParentBottom="true"/>&ndash;&gt;
+            &lt;!&ndash;</RelativeLayout>&ndash;&gt;
+
+
+            <LinearLayout
+                android:id="@+id/establecimiento_layout_favoritos_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp">
+
+                <ImageButton
+                    android:id="@+id/button2"
+                    android:layout_width="70dp"
+                    android:layout_height="60dp"
+                    android:src="@android:drawable/ic_dialog_info"
+                    android:layout_centerHorizontal="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Info"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/black"/>
+            </LinearLayout>
+
+            &lt;!&ndash;<RelativeLayout&ndash;&gt;
+                &lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;
+                &lt;!&ndash;android:layout_height="match_parent">&ndash;&gt;
+
+                &lt;!&ndash;<ImageButton&ndash;&gt;
+                    &lt;!&ndash;android:id="@+id/establecimiento_share_button"&ndash;&gt;
+                    &lt;!&ndash;android:layout_width="70dp"&ndash;&gt;
+                    &lt;!&ndash;android:layout_height="60dp"&ndash;&gt;
+                    &lt;!&ndash;android:src="@android:drawable/ic_menu_share"&ndash;&gt;
+                    &lt;!&ndash;android:layout_centerHorizontal="true"&ndash;&gt;
+                    &lt;!&ndash;android:background="?attr/selectableItemBackgroundBorderless"/>&ndash;&gt;
+
+                &lt;!&ndash;<TextView&ndash;&gt;
+                    &lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;
+                    &lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;
+                    &lt;!&ndash;android:text="BUTTON 3"&ndash;&gt;
+                    &lt;!&ndash;android:textColor="@android:color/black"&ndash;&gt;
+                    &lt;!&ndash;android:layout_alignParentBottom="true"/>&ndash;&gt;
+            &lt;!&ndash;</RelativeLayout>&ndash;&gt;
+        </LinearLayout>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="16dp"-->
+
+            <!--android:text="Ceeeeva"-->
+            <!--android:textSize="12sp"-->
+            <!--android:textColor="@android:color/black"/>-->
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
